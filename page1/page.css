@@ -1,0 +1,128 @@
+.main{
+    width: 1283px;
+    margin: auto;
+    position: relative;
+}
+.nav{
+    height: 54px;
+    background-color: #222222;
+    
+}
+.nav .nav-left ul{
+    float: left;
+   
+}
+.nav .nav-left ul li{
+    float: left;
+    line-height: 54px;
+    
+}
+.nav .nav-left ul li a{
+    height: 54px;
+    padding-left: 15px;
+    padding-right: 15px;
+     text-align: center;
+     transition: background-color 1s;
+}
+.nav .nav-left ul li:hover a{
+    display: block;
+    background-color: #4b7dd1;
+    color: #ffffff;
+}
+.nav .nav-center ul{
+    float: left;
+    margin-left: 230px;  
+}
+.nav .nav-center ul li{
+    line-height: 54px;
+    font-size: 19px;
+    font-weight: 900;
+}
+.nav .nav-center ul li a{
+    color: #ffffff;
+    width: 119px;
+    height: 20px;
+    transition: color 1s;
+}
+.nav .nav-center ul li a:hover{
+    color:#4b7dd1;
+}
+.nav .nav-right ul{
+    float: right;
+}
+.nav .nav-right ul li{
+    float: left;
+    line-height: 54px;
+}
+.nav .nav-right ul li a{
+    height: 54px;
+    padding-left: 15px;
+    padding-right: 15px;
+     text-align: center;
+     transition: background-color 1s;
+}
+.nav .nav-right ul li:hover a{
+    display: block;
+    background-color: #4b7dd1;
+    color: #ffffff;
+}
+.nav .nav-left ul li a,.nav .nav-right ul li a{
+    color: #9d9d99;
+}
+#list{
+    height: 250px;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top:54px;
+    display: none;
+}
+#list ul{
+    margin-left: 15px;
+    margin-top:30px;
+}
+#list ul li{
+    padding-top:15px;
+}
+#list ul li:nth-child(1){
+    font-weight: 900;
+}
+.banner{
+    height: 790px;
+    position: relative;
+     /* overflow: hidden;  */
+
+}
+.banner img{
+    width: 100%;
+    
+}
+#box{
+    position:relative;
+}
+#box li{
+    position:absolute;
+    top:0;
+    left:0;
+}
+ol{
+    position: absolute;
+    right: 600px;
+    bottom: 30px;
+    width: 190px;
+}
+#pox li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: default;
+    background-color: #abc;
+    opacity: 0.5;
+}
+#pox li.current{
+    background-color: #ffffff;
+    opacity: 1;
+}

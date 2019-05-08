@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./gonggong.css">
+    <link rel="stylesheet" href="./page.css">
+    <script src="./animate6.0.js"></script>
+    <title>创维子页面</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="main">
+            <div class="nav-left">
+                <ul>
+                    <li id="lione"><a href="#" >电视&影音</a></li>
+                    <li id="litow"><a href="#">生活家电</a></li>
+                    <li id="lithr"><a href="#">智能周边</a></li>
+                    <li><a href="#">创维商城</a></li>
+                </ul>
+            </div>
+            <div class="nav-center">
+                <ul>
+                    <li><a href="#" id="title">SKYWORTH</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#">关于创维</a></li>
+                    <li><a href="#">商用解决方案</a></li>
+                    <li id="lifour"><a href="#">售后服务</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="list">
+            <div class="main">
+                <ul>
+                <li><a href="#">电视</a></li>
+                <li><a href="#">是多少</a></li>
+                <li><a href="#">是多少</a></li>
+                <li><a href="#">是多少</a></li>
+            </ul>
+            <div id="img"><img src="#" alt=""></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="banner">
+        <ul id="box">
+            <li style="z-index:3"><a href="#"><img src="./ii/1.jpg"></a></li>
+            <li style="z-index:2"><a href="#"><img src="./ii/2.jpg"></a></li>
+            <li style="z-index:1"><a href="#"><img src="./ii/3.jpg"></a></li>
+        </ul>
+        <ol style="z-index: 10;" id="pox">
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+            </ol>
+    </div>
+</body>
+          
+            <script>
+                var box = document.getElementById("box");
+                var bLi = box.children;
+                var uLi = document.getElementById("pox").children;
+                setInterval(autoPlay,2000);
+                var index = 0;
+                function autoPlay(){
+                    for(var i = 0;i<bLi.length;i++){
+                        animate(bLi[i],{opacity:0})
+                    }
+                    if(index == boxLi.length-1){
+                        index = 0;
+                    }else{
+                        index++;
+                    }
+                    //boxLi[index].style.opacity = 1;
+                    animate(boxLi[index],{"opacity":100});
+                    
+                    uuLi[index].className = "current";
+                }
+            //    var lione = document.getElementById("lione");
+            //    var litow = document.getElementById("litow");
+            //    var lithr = document.getElementById("lithr");
+            //    var lifour = document.getElementById("lifour");
+            //    var list  = document.getElementById("list");
+                
+                   
+                //    lione.onmouseleave = function(){
+                //         list.style.display = "none";
+                //           animate(list,{top:-194})
+                //    }
+                // $(function(){
+                //     $.ajax({
+                //         type: "get",//请求方式
+                //         url: "./group.json",//地址，就是json文件的请求路径
+                //         dataType: "json",
+                //         success: function(data){
+                //             console.log(data);
+                //         }
+                //     })
+                // })
+                //  lione.onmouseover = function(){
+                //         list.style.display = "block";
+                //         animate(list,{top:54})
+                //   } 
+
+               
+            </script>
+</html>
