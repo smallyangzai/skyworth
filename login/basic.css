@@ -1,0 +1,28 @@
+body, ul ,ol ,th ,td, dl ,h1, h2 ,h3, h4, h5, h6, p, form, input, textarea, fieldset, legend, select{
+	padding: 0;
+	 margin: 0;
+}
+a{ 
+	text-decoration: none;
+}
+li{
+	list-style:none;
+} 
+h1 h2 h3 h4 h5 h6{
+	font-weight: normal;
+}
+img{
+	border: none;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float: right;
+}
+.clearfix:after{
+	 content: "."; clear: both; display: block; height: 0; overflow: hidden; visibility: hidden; font-size: 1px;
+}
+body{
+	font-family: "微软雅黑"; font-size: 12px;
+}
