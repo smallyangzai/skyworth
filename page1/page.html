@@ -53,58 +53,126 @@
             <li style="z-index:1"><a href="#"><img src="./ii/3.jpg"></a></li>
         </ul>
         <ol style="z-index: 10;" id="pox">
-                <li class="current"></li>
-                <li></li>
-                <li></li>
+                <li class="current"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
             </ol>
+    </div>
+    <div class="banner-one"><img src="./ii/4.png" alt=""></div>
+    <div class="banner-two">
+        <ul>
+           <li>
+               <a href="#"><img src="./ii/5.jpg" alt=""></a>
+               <ol class="theme">
+                   <li><a href="#">Sound Bar</a></li>
+                   <li><a href="#">视听的再一次突破</a></li>
+                   <li><a href="#"><button id="btn">了解更多</button></a></li>
+               </ol>
+            </li>
+           <li>
+               <a href="#"><img src="./ii/6.png" alt=""></a>
+               <ol class="theme-one">
+                    <li><a href="#">120英寸</a></li>
+                    <li><a href="#">家里的巨幕影院</a></li>
+                    <li><a href="#"><button id="btn">了解更多</button></a></li>
+                </ol>
+            </li>
+           <li>
+               <a href="#"><img src="./ii/7.jpg" alt=""></a>
+               <ol class="theme-three">
+                    <li><a href="#">创维 8K VR 一体机</a></li>
+                    <li><a href="#">清晰无界 尽享无限</a></li>
+                    <li><a href="#"><button id="btn">了解更多</button></a></li>
+                </ol>
+            </li>
+           <li>
+               <a href="#"><img src="./ii/8.png" alt=""></a>
+               <ol class="theme-four">
+                    <li><a href="#">一 Π 即合</a></li>
+                    <li><a href="#">玩出你的freesty</a></li>
+                    <li><a href="#"><button id="btn">了解更多</button></a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="banner-three">
+        <img src="./ii/20.png" alt="">
+        <ol class="theme-five">
+                <li><a href="#">星级体验</a></li>
+                <li><a href="#">尽享智慧</a></li>
+                <li><a href="#"><button id="btm">了解更多</button></a></li>
+            </ol>
+    </div>
+    <div class="banner-four">
+        <ul>
+            <li>
+                <a href="#"><img src="./ii/21.jpg" alt="">
+                    <ol class="theme-six">
+                            <li><a href="#">Al 智能大屏冰箱</a></li>
+                            <li><a href="#">为 Al 而来，声动世界</a></li>
+                            <li><a href="#"><button id="btn">了解更多</button></a></li>
+                        </ol>
+                </a>
+            </li>
+            <li><a href="#"><img src="./ii/22.jpg" alt=""></a></li>
+        </ul>
     </div>
 </body>
           
             <script>
                 var box = document.getElementById("box");
                 var bLi = box.children;
-                var uLi = document.getElementById("pox").children;
-                setInterval(autoPlay,2000);
+                var uLi = document.getElementById("pox")
+                var uuLi = uLi.children;
+                setInterval(autoPlay,3000);
                 var index = 0;
                 function autoPlay(){
                     for(var i = 0;i<bLi.length;i++){
                         animate(bLi[i],{opacity:0})
+                        uuLi[i].className = "";
                     }
-                    if(index == boxLi.length-1){
+                    if(index == bLi.length-1){
                         index = 0;
                     }else{
                         index++;
                     }
-                    //boxLi[index].style.opacity = 1;
-                    animate(boxLi[index],{"opacity":100});
-                    
+                    animate(bLi[index],{"opacity":100});
                     uuLi[index].className = "current";
                 }
-            //    var lione = document.getElementById("lione");
+                function hover(){
+                      //uuLi[i].className = "";
+                    for(var i = 0;i<uuLi.length;i++){
+                        
+                        uuLi[i].onclick = (function(i){
+
+                            return function(){
+                                console.log(i); // 0 1 2
+                                uuLi[i].className ="current";
+                                
+                            }
+                        })(i)
+                       
+                    }
+                }
+                hover();
+                var lione = document.getElementById("lione");
             //    var litow = document.getElementById("litow");
             //    var lithr = document.getElementById("lithr");
             //    var lifour = document.getElementById("lifour");
             //    var list  = document.getElementById("list");
                 
-                   
-                //    lione.onmouseleave = function(){
-                //         list.style.display = "none";
-                //           animate(list,{top:-194})
-                //    }
-                // $(function(){
-                //     $.ajax({
-                //         type: "get",//请求方式
-                //         url: "./group.json",//地址，就是json文件的请求路径
-                //         dataType: "json",
-                //         success: function(data){
-                //             console.log(data);
-                //         }
-                //     })
-                // })
-                //  lione.onmouseover = function(){
-                //         list.style.display = "block";
-                //         animate(list,{top:54})
-                //   } 
+                function drap(){      
+                 lione.onmouseover = function(){
+                        list.style.display = "block";
+                        animate(list,{top:54})
+                  }
+                lione.onmouseleave = function(){
+                        list.style.display = "none";
+                          //animate(list,{bottom:194})
+                   }
+                  }
+                   drap();
+                  
 
                
             </script>

@@ -6,7 +6,7 @@ function animate(ele,property,callBack){
     ele.timer = setInterval(function(){
     	var flag = true;//所有的属性都到达了目标值
     	for(var attr in property){
-    		console.log(attr);
+    		// console.log(attr);
             var current = 0;
             if(attr == "opacity"){
             	current = getStyle(ele,attr)*100;
@@ -37,7 +37,7 @@ function animate(ele,property,callBack){
         			callBack();
         		}
         	}
-        },10)
+        },50)
     }
    
 	function getStyle(ele,attr){
