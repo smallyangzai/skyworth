@@ -1,0 +1,23 @@
+body,ol,li,ul,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,span,i,em,tr,td,th,input,
+form,select,legend,textarea,fieldset,img{
+	margin: 0; padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #223333;
+}
+ul li,ol li{
+	list-style: none; 
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+body{
+	font-family: "微软雅黑";
+}
+img{
+	border: none;
+}
+i,em{
+	font-style: normal;
+}

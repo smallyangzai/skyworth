@@ -1,28 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap.js">
-    <link rel="stylesheet" href="./jquery-3.3.1.js">
-    <link rel="stylesheet" href="./css/list-style.css">
+    <!-- <script src="./jquery-3.3.1.js"></script> -->
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/list-style.css">
+    <link rel="stylesheet" href="tc.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="./jquery-1.12.4.js"></script>
+    <!-- <script src="animate6.0.js"></script> -->
+    <script src="index.js"></script>
 </head>
 <body class="container">
-    <table class=".table-hover">
-        <td class="text-lowercase">
-        <a href="">首页</a>
-        <em>/</em>
-        商品列表
-        </td>
-        <td class="text-lowercase">
-                <a href="">首页</a>
-                <em>/</em>
-                商品列表
-                </td>
-        
+        <div class="top">
+                <div class="main">
+                    <P>欢迎您，来到创维官方商城</P>
+                    <ul>
+                        <li><a href="#">登陆</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">我的订单</a></li>
+                        <li>
+                            <a href="#">手机端 <span><img src="img/images/erweima.png" alt=""></span></a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+            <div class="nav">
+                <div class="main">
+                    <div class="log">
+                        <ul>
+                            <li><img src="img/images/logo.jpg"></li>
+                            <li class="search">
+                                <input class="searchR" type="text" placeholder="输入条件">
+                                <a class="btn" href="#"><span class="iconfont">&#xe60b;</span></a>
+                            </li>
+                            <li >
+                                <a class="car" href="#"><span class="iconfont">&#xe504;</span>我的购物车</a>
+                                <div class="mycar">
+                                    <div class="l1">
+                                        <p>&nbsp;&nbsp;购物车列表</p>
+                                        <!-- <span>X</span> -->
+                                        
+                                    </div>
+                                    <div class="l2">
+                                        <em>&nbsp;&nbsp;共<span>0</span>件商品&nbsp;总计￥<i>0</i></em>
+                                        <a class="btn" href="#">去购物车</a>
+                                    </div>
+                                </div>
+                                <span class="num">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="snav">
+                        <ul>
+                            <li><a href="#">OLED</a></li>
+                            <li><a href="#">超薄</a></li>
+                            <li><a href="#">4K超清</a></li>
+                            <li><a href="#">全面屏</a></li>
+                            <li><a href="#">防蓝光护眼</a></li>
+                            <li><a href="#">大屏</a></li>
+                            <li><a href="#">智能网络</a></li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <p><a href="#"><span class="iconfont">&#xe641;</span>商品列表</a>
+                            <div class="yincang" style="display:none">
+                                    <li>电视</li>
+                                    <li>盒子/投影仪</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                                    <li>灯饰</li>
+                            </div>
+                        </p>
+                        
+                        <ul>
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">服务</a></li>
+                            <li><a href="#">创维集团</a></li>
+                            <li><a href="#">爱内购</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    <div class="crumb"><a href="">首页</a>
+        <span>/</span>
+        <span class="zi">商品列表</span>
+    </div>
+    <div class="inside-pro">
+        <div class="inside_border inside_price ">
+            <div class="inside_gray">品牌</div>
+            <ul>
+                <li class="tab"><a class="kuang" href="javascript:;">全部</a></li>
+                <li class="tab"><a href="javascript:;">创维</a></li>
+                <li class="tab"><a href="javascript:;">酷开</a></li>
+            </ul>
+        </div>
+        <div class="inside_border inside_price clearfix">
+            <div class="inside_gray">价格</div>
+            <ul>
+                <li class="tab"><a href="#" class="kuang">全部</a></li>
+                <li class="tab"><a href="#" class="">2000-3999</a></li>
+                <li class="tab"><a href="#">4000-5999</a></li>
+                <li class="tab"><a href="#">6000-9999</a></li>
+                <li class="tab"><a href="#">10000-14999</a></li>
+                <li class="tab"><a href="#">15000-24999</a></li>
+                <li class="tab"><a href="#">25000以上</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="insider_screen">
+        <div class="screen_wrap">
+            <ul class="screen_ul">
+                <li class="tab"><a href="#" class="kuang">综合排序</a></li>
+                <li class="tab"><a href="#">销量</a></li>
+                <li class="tab"><a href="#">上架时间</a></li>
+                <li>
+                    <div class="checkboxFive input_check">
+                        <input type="checkbox">
+                        <span class="only-check">仅看有货</span></label>
+                    </div>
+                </li>
+            </ul>
+            <div class="screen_right">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".tab > a").on('click', function(){
+            //添加框框
+            $(this).parents('ul').find('a').removeClass('kuang');
+            $(this).addClass('kuang');
+            //删除价格不符合的
+            var jia = $(this).text();
+            var money = $('.money').text();
+            var qian2 = money.split("￥")
+            //console.log(qian2[1]);
+            var jia2 = jia.split("-");
+            // console.log(jia2[0])
+            // console.log(jia2[1])
+            for (i = 0; i <= qian2.length - 1; i++) {
+                // console.log(qian2[i])
+                if (jia2[0] < qian2[i] && qian2[i] < jia2[1]) {
+                    //添加
+                    console.log(1)
+                    // qian2[i].parents('.nav-list').toggleClass('nav-list')
+                } else {
+                    //删除
+                    console.log(2)
+                    // $('.nav-list')[i].next().nextAll().remove()
+                    //money[i].parent().remove('.nav-list')
+                }
+            }    
+    })
+    </script>
+    <!-- 商品详情 -->
+    <table class=".table  tab-nav">
+        <tr>
+            <td class="nav-list " id="nav_list1">
+                <a href="">
+                    <div class="top-tu"><img  src="./images/201808070450359166.jpg" alt=""></div>
+                </a>
+                <a href="">
+                    <div class="money-b">
+                        <div class="money">￥8888.00</div>
+                    </div>
+                </a>
+                <div class="product-mid">
+                    <h3><a href="">55H20(送智能音箱 )</a></h3>
+                    <p>4K超清 全面屏 光学防蓝光护眼</p>
+                </div>
+                <div class="product-bot">
+                    <div product>
+                        <span class="store_name">创维-RGB电子有限公司</span>
+                        <span><a href="">11</a></span>
+                    </div>
+                    <div class="pro-left"><a href=""> <i></i>购物车</a></div>
+                    <div class="pro-rig">销量：8888</div>
+                </div>
+                <div class="hot"><img src="./images/imageTag3.png"></div>
+            </td>
+            <td class="nav-list" id="nav_list2">
+                <a href="">
+                    <div class="top-tu"><img src="./images/201808070450359166.jpg" alt=""></div>
+                </a>
+                <a href="">
+                    <div class="money-b">
+                        <div class="money">￥8888.00</div>
+                    </div>
+                </a>
+                <div class="product-mid">
+                    <h3><a href="">55H20(送智能音箱 )</a></h3>
+                    <p>4K超清 全面屏 光学防蓝光护眼</p>
+                </div>
+                <div class="product-bot">
+                    <div product>
+                        <span class="store_name">创维-RGB电子有限公司</span>
+                        <span><a href="">11</a></span>
+                    </div>
+                    <div class="pro-left"><a href=""> <i></i>购物车</a></div>
+                    <div class="pro-rig">销量：8888</div>
+                </div>
+                <div class="hot"><img src="./images/imageTag3.png"></div>
+            </td>
+            <td class="nav-list" id="nav_list3">
+                <a href="">
+                    <div class="top-tu"><img src="./images/201808070450359166.jpg" alt=""></div>
+                </a>
+                <a href="">
+                    <div class="money-b">
+                        <div class="money">￥8888.00</div>
+                    </div>
+                </a>
+                <div class="product-mid">
+                    <h3><a href="">55H20(送智能音箱 )</a></h3>
+                    <p>4K超清 全面屏 光学防蓝光护眼</p>
+                </div>
+                <div class="product-bot">
+                    <div product>
+                        <span class="store_name">创维-RGB电子有限公司</span>
+                        <span><a href="">11</a></span>
+                    </div>
+                    <div class="pro-left"><a href=""> <i></i>购物车</a></div>
+                    <div class="pro-rig">销量：8888</div>
+                </div>
+                <div class="hot"><img src="./images/imageTag3.png"></div>
+            </td>
+            <td class="nav-list" id="nav_list4">
+                <a href="">
+                    <div class="top-tu"><img src="./images/201808070450359166.jpg" alt=""></div>
+                </a>
+                <a href="">
+                    <div class="money-b">
+                        <div class="money">￥8888.00</div>
+                    </div>
+                </a>
+                <div class="product-mid">
+                    <h3><a href="">55H20(送智能音箱 )</a></h3>
+                    <p>4K超清 全面屏 光学防蓝光护眼</p>
+                </div>
+                <div class="product-bot">
+                    <div product>
+                        <span class="store_name">创维-RGB电子有限公司</span>
+                        <span><a href="">11</a></span>
+                    </div>
+                    <div class="pro-left"><a href=""> <i></i>购物车</a></div>
+                    <div class="pro-rig">销量：8888</div>
+                </div>
+                <div class="hot"><img src="./images/imageTag3.png"></div>
+            </td>
+            <td class="nav-list" id="nav_list5">
+                <a href="">
+                    <div class="top-tu"><img src="./images/201808070450359166.jpg" alt=""></div>
+                </a>
+                <a href="">
+                    <div class="money-b">
+                        <div class="money">￥8888.00</div>
+                    </div>
+                </a>
+                <div class="product-mid">
+                    <h3><a href="">55H20(送智能音箱 )</a></h3>
+                    <p>4K超清 全面屏 光学防蓝光护眼</p>
+                </div>
+                <div class="product-bot">
+                    <div product>
+                        <span class="store_name">创维-RGB电子有限公司</span>
+                        <span><a href="">11</a></span>
+                    </div>
+                    <div class="pro-left"><a href=""> <i></i>购物车</a></div>
+                    <div class="pro-rig">销量：8888</div>
+                </div>
+                <div class="hot"><img src="./images/imageTag3.png"></div>
+            </td>
+
+        </tr>
     </table>
+    <!-- 结尾 -->
+    <div class="footer">
+            <div class="main">
+                <div>
+                    <h3>支付方式</h3>
+                    <ul>
+                        <li><a href="#">微信支付</a></li>
+                        <li><a href="#">支付宝</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>售后服务</h3>
+                    <ul>
+                        <li><a href="#">增值税专票</a></li>
+                        <li><a href="#">发票无忧</a></li>
+                        <li><a href="#">安装维修</a></li>
+                        <li><a href="#">验货提醒</a></li>
+                    </ul>
+                </div>
+                <ul class="f1">
+                    <li>400-866-5555</li>
+                    <li>周一至周日 7:00 - 23:00</li>
+                    <li><a href="#"><span class="iconfont">&#xe619;</span>在线客服</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="main">
+                <p>友情链接：<span>酷开TV</span></p>
+                <p>ICP备案证号：粤ICP备09157852号</p>
+            </div>
+        </div>
 </body>
+<script>
+
+(function(){
+     var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        var responseData = xhr.responseText
+        //把后台返回的json字符串，转换为对象
+        var data = JSON.parse(responseData);
+        // console.log( data[0].src );
+       $(data).each(function(index,item){
+           //console.log(item.name);
+            $('.product-mid  a').eq(index).html(item.name)
+            $('.product-mid  p').eq(index).html(item.des)
+            $('.money').eq(index).html(item.price)   
+           // $('.top-tu img').eq(index).attr("src",item.src)         
+       })
+
+      }
+    }
+    xhr.open('get','../JSON/data.json',true);
+    xhr.send(null )
+})();
+      
+
+
+</script>
 </html>
