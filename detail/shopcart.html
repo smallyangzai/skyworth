@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="shortcut icon" href="https://www.skyworthds.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="./css/shopcart.css" />
+    <script src="./js/jquery.js"></script>
+    <script src="./js/shopcart.js"></script>
+</head>
+<body>
+    <div class="section">
+       <div class="section-hd">
+           <ul class="cart-hd">
+               <div class="checkboxfive">
+               <li class="list-chk "><input type="checkbox" id="checkall" ></li>
+                </div>
+               <li class="list-con list-text" style="line-height:50px;">商品信息</li>
+               <li class="list-price">单价</li>
+               <li class="list-amount">数量</li>
+               <li class="list-sum">金额</li>
+               <li class="list-op">操作</li>
+           </ul>
+       </div>
+       <!--中间商品列模板-->
+       <div class="cartbox">
+           <ul class="list-cart">
+                <div class="checkboxfive">
+                <li class="list-chk "><input type="checkbox" id="goods" ></li>
+                </div>
+                <li class="list-con">
+                    <div class="list-img">
+                        <a href="#">
+                            <img src="./img/shop1.jpg" alt="" width="90" height="90">
+                        </a>
+                    </div>
+                    <div class="list-text">
+                        <a href="#">65S9A(送延保)</a>
+                        <p class="p-padding">65寸|全面屏|变色龙AI芯片|OLED像素控光</p>
+                        <p class="p-padding">配送公司：创维-RGB电子有限公司</p>
+                        
+
+                    </div>
+                </li>
+                <li class="list-price"><p class="price">￥25999.00</p><p class="text-de">￥29999.00</p></li>
+                <li class="list-amount list-ge">
+                        <a href="javascript:void(0);" class="reduce">
+                                <i class="iconfont">&#xe501;</i>
+                            </a>
+                            <input type="text" value="1" id="var-number" class="var-number">
+                            <a href="javascript:void(0);" class="add">
+                                <i class="iconfont">&#xe515;</i>
+                            </a>
+                </li>
+                <li class="list-sum"><p class="price">￥25999.00</p></li>
+                <li class="list-op">移除商品</li>
+           </ul>
+       </div>
+
+       <!--总金额一列-->
+       <div class="bar-wrapper">
+           <div class="bar-left">
+            <div class="content-all">
+                    <div class="checkboxfive">
+                        <input type="checkbox" id="quitall" > 
+                        <span>取消全选</span>
+                    </div>    
+            </div>
+            <div class="goon"><a href="#">继续购物</a></div>
+           </div>
+           <div class="bar-right">
+                <div class="piece">已选商品<strong class="piece-num" id="cnum">0</strong>件</div>
+                <div class="totalMoney">共计: <strong class="total-text" id="cprice">0.00</strong></div>
+                <div class="calBtn"><a href="#"  style="cursor: pointer;">结算</a></div>
+            </div>
+
+       </div>
+    </div>
+    
+</body>
+<script>
+      /*商品数量增减的逻辑*/
+      var num = $("#var-number").val();
+    $(".reduce").on("click",function(){
+      if(num==1){
+          num=1;
+          alert("更新购物车失败");
+      }else{
+      num--;
+    }
+      $("#var-number").val(num);
+    })
+
+    $(".add").on("click",function(){ 
+      num++;
+      $("#var-number").val(num);
+    })
+    /*购物车开始*/
+    
+
+    /*购物车结束*/
+
+</script>
+</html>

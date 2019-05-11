@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    background-color: #f4f4f4;
+}
+
+.section {
+    position: relative;
+    width: 1210px;
+    margin: 15px auto 0 auto;
+    padding: 0 20px;
+    background: #FFF;
+}
+.section .section-hd {
+    height: 50px;
+    line-height: 50px;
+    color: #3c3c3c;
+
+}
+
+.cart-hd li{
+    float: left;
+    color: #666;
+}
+.list-text{
+    padding-left: 26px;
+}
+/*cartbox的样式*/
+.list-chk{
+    width: 80px;
+    text-align: center;
+}
+
+ .list-con{
+    width: 500px;
+    text-align: left;
+      
+}
+ .list-price{
+    width: 130px;
+    text-align: center;
+}
+.list-amount{
+    width: 120px;
+    text-align: center;
+}
+.list-sum{
+    width: 140px;
+    text-align: center;
+}
+.list-op{
+    width: 164px;
+    text-align: center;
+}
+/*cartbox样式结束*/
+.bar-wrapper{
+    width: 1170px;
+    height: 55px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+.bar-left{
+    float: left;
+    line-height: 55px;
+    color: #666;
+}
+.bar-left .content-all{
+    float: left;
+    margin-left: 34px;
+}
+.bar-left .goon{
+    cursor: pointer;
+    float: left;
+    margin-left: 34px;
+}
+.bar-left .goon a{
+    display: block;
+    color: #666;
+    text-decoration: none;
+}
+
+.bar-right{
+    float: right;
+    color: #3c3c3c;
+}
+.bar-right .piece{
+    float: left;
+    margin-right: 20px;
+    height: 55px;
+    line-height: 55px;
+}
+.bar-right .piece .piece-num{
+    padding: 0 10px;
+    font-weight: normal;
+    color: #2e8ae3;
+}
+.bar-right .totalMoney{
+    float: left;
+    min-width: 100px;
+    height: 55px;
+    line-height: 55px;
+    margin-right: 10px;
+}
+
+.bar-right .total-text{
+    float: right;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Arial;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 5px;
+    color: #e83733;
+}
+
+.bar-right .calBtn{
+    float: left;
+    background: #e83733;
+}
+
+.bar-right .calBtn a{
+    display: block;
+    width: 120px;
+    height: 55px;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 2px;
+}
+/*商品列样式*/
+.list-cart{
+    border-top: 1px solid #eee;
+    height:120px;
+    padding-top: 20px; 
+}
+
+.list-cart li{
+    float: left;
+    color: #666;
+}
+
+.list-cart .price{
+    line-height: 18px;
+    color: #e83733;
+    font-size: 16px;
+}
+
+.list-cart .text-de{
+    text-decoration: line-through;
+    color: #999;
+    padding-top: 5px;
+}
+.list-amount a{
+    display: block;
+}
+.reduce, .add{
+    border: 1px solid #e5e5e5;
+    float: left;
+    height: 25px;
+    width: 18px;
+    background: #f0f0f0;
+    text-align: center;
+    line-height: 27px;
+   
+}
+.var-number{
+    height: 25px;
+    width: 39px;
+    text-align: center;
+    float: left;
+    border: 1px solid #e5e5e5;
+    border-left: 0;
+    border-right: 0;
+}
+
+.list-cart .list-ge{
+    padding-left:24px;
+}
+
+.list-cart .list-img{
+    width: 90px;
+    height: 90px;
+    float: left;
+}
+.list-text{
+    line-height: 18px;
+    float: left;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 5px;
+}
+.list-text a{
+    display: block;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.p-padding{
+    font-size: 12px;
+    color: #999;
+}
