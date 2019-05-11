@@ -234,7 +234,7 @@
     top:55%;
     left: 55%;
 }
-.banner-two .theme li:nth-child(1) a,.banner-two .theme-one li:nth-child(1) a,.banner-two .theme-three li:nth-child(1) a,.banner-two .theme-four li:nth-child(1) a{
+.banner-two .theme li:nth-child(1) a,.banner-two .theme-one li:nth-child(1) a,.banner-two .theme-three li:nth-child(1) a,.banner-two .theme-four li:nth-child(1) a,.banner-four .theme-six li:nth-child(1) a,.banner-four .theme-seven li:nth-child(1) a{
     font-size: 24px;
     color: #ffffff;
     letter-spacing: 3.4px;
@@ -245,7 +245,7 @@
     letter-spacing: 3.4px;
     line-height: 60px
 }
-.banner-two .theme-three li:nth-child(2) a,.banner-two .theme-four li:nth-child(2) a{
+.banner-two .theme-three li:nth-child(2) a,.banner-two .theme-four li:nth-child(2) a,.banner-four .theme-six li:nth-child(2) a,.banner-four .theme-seven li:nth-child(2) a{
     font-size: 16px;
     color: #ffffff;
     letter-spacing: 3.4px;
@@ -278,7 +278,8 @@
     top:10%;
     left: 8.5%;
 }
-,.banner-four .theme-six li:nth-child(1) a{
-    
+.banner-four .theme-seven{
+    position: absolute;
+    top: 10%;
+    left:55%;
 }
-
