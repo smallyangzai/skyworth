@@ -105,8 +105,20 @@
     border: 1px solid #cccccc; 
     border-right: none;
 }
+.yanzheng{
+    width:170px; 
+    height: 54px;
+    line-height: 54px; 
+    background: #cccccc; 
+    border: 1px solid #cccccc; 
+    border-radius:0 3px 3px 0;
+    margin-top: 15px;
+    font-size: 15px;
+    padding-left: 8px;
+}
 .code{
     display: inline-block;
+    position: relative;
     width: 181px;
     height: 52px;
     margin-top:15px;
@@ -115,6 +127,19 @@
     border: 1px solid #cccccc; 
     border-left: none;
     text-align: center;
+}
+.acode{
+    cursor:pointer;
+    margin-left: 40px;
+    color: #333333;
+    position: absolute;
+    left: 40px;
+    top:12px; 
+}
+.vcode{
+    width:62px; 
+    height:28px;
+    margin-top:10px;
 }
 .mc-in li{
     display: flex;
@@ -132,7 +157,7 @@
 }
 .foot{ 
     height:100px; 
-    background-color:#FFFFFF
+    background-color:#FFFFFF;
 }
 .u1{
     margin-left:270px;

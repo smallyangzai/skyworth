@@ -8,6 +8,8 @@
     <link href="basic.css" rel="stylesheet" type="text/css" />
     <link href="register.css" rel="stylesheet" type="text/css" />
     <link href="./font/iconfont.css" rel="styleesheet" type="text/css" />
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <script src="./yanzhengma.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -42,26 +44,29 @@
                     <div class="mc">
                         <ul class="mc-in">
                                 <li>
-                                    <input type="text" class="inp2"placeholder="请输入图形验证码" />
+                                    <input id="code" type="text" class="inp2" placeholder="请输入图形验证码" />
                                     <span class="code">
-                                        <img src="./img/checkcode.jpg" style="cursor:pointer; padding-top: 8px;" title="看不清楚，换一张">
-                                        <a href="#" style="cursor:pointer; height: 47px; display: inline-block; vertical-align: middle; color: #333333">换一张</a>
+                                        <div id="v_container" class="vcode" ></div>
+                                        <a class="acode" onclick="huan()">换一张</a>
                                     </span>
                                 </li>
-                                    <span style="color: #999" class="iconfont">&#xe6ea;请输入图形验证码</span>
+                                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="color: #999" ></span>
+                                    <span style="color: #999" >请输入图形验证码</span>
                                 <li>
-                                    <input type="text" class="inp" placeholder="请输入手机号码" />
+                                    <input id="phone" type="text" class="inp" placeholder="请输入手机号码"/>
                                 </li>
-                                    <span style="color: #999" class="iconfont">&#xe6ea;验证完成后，可以用此手机号进行登录和找回密码</span>
+                                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="color: #999" ></span>
+                                    <span style="color: #999" >验证完成后，可以用此手机号进行登录和找回密码</span>
                                 <li style="overflow:hidden;">
-                                    <input type="text" style=" overflow: hidden; border-right: none" class="inp"  placeholder="请输入手机验证码" />
+                                    <input id="yan" type="text" style=" overflow: hidden; border-right: none" class="inp2"  placeholder="请输入手机验证码" />
                                     <span class="phone">
-                                        <input type="button" style="width:150px; height: 54px; line-height: 54px; background: #cccccc; border-radius:0 3px 3px 0" class="btnlogin" style="cursor:pointer" value="发送验证码" />
+                                        <input type="button" class="yanzheng" style="cursor:pointer" value="发送验证码" />
                                     </span>
                                 </li>
-                                    <span style="color: #999" class="iconfont">&#xe6ea;验证码已发送，请在120秒内输入正确的验证码</span>
+                                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true" style="color: #999" ></span>
+                                    <span style="color: #999" >验证码已发送，请在120秒内输入正确的验证码</span>
                                 <li>
-                                    <input type="button" id="login" style="cursor:pointer" class="btnlogin" value="登录" />
+                                    <input type="button" id="login" style="cursor:pointer" class="btnlogin" value="下一步" />
                                 </li>
                             </ul>
                     </div>
@@ -93,3 +98,60 @@
     </div>
 </body>
 </html>
+<script>
+    /*
+    $("#login").on("click",function(){
+        var code = $("#code").val();
+        var phone = $("#phone").val();
+        var yan = $("#yan").val();
+
+        var phoneflag=false;
+        var telreg=/^(((\()?\d{2,4}(\))?[-(\s)*]){0,2})?(\d{7,8})$/;
+        var phonereg=/^(13[0-9]{9})|(15[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(18[0-9]{9})|(19[0-9]{9})$/;
+
+        if(phone == ""){
+            alert("账号不能为空");
+            $("#phone").select();
+            return false;
+        }
+
+        if(yan == ""){
+            alert("手机验证码不能为空");
+            $("#yan").select();
+            return false;
+        }
+
+        if(code == ""){
+            alert("图形验证码不能为空");
+            $("#code").select();
+            return false;
+        }
+        
+
+        if(phonereg.test(phone)){
+            phoneflag = true;
+        }else if(telreg.test(phone)){
+            phoneflag = true;
+        }else{
+            phoneflag = false;
+            alert("手机号码不符合要求");
+        }
+    });*/
+
+
+    //验证码的判断
+    var verifycode = new GVerify("v_container");
+    document.getElementById("login").onclick = function(){
+        var res = verifycode.validate(document.getElementById("code").value);
+        if(res){
+            alert("验证正确");
+        }else{
+            alert("验证码错误");
+        }
+    }
+    
+    function huan(){
+        var verifycode = new GVerify("v_container");
+        var res = verifycode.validate(document.getElementById("code").value);
+    }
+</script>

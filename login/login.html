@@ -7,6 +7,10 @@
     <title>创维登录</title>
     <link href="basic.css" rel="stylesheet" type="text/css" />
     <link href="login.css" rel="stylesheet" type="text/css" />
+    <script src="../public/jquery.js"></script>
+    <script src="../public/jquery.min.js"></script>
+    <script src="../public/public.js"></script>
+    <script src="./yanzhengma.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -25,21 +29,21 @@
                     </div>
                     <div class="mrc">
                         <ul class="mcenter">
-                            <li><input type="text" id="name" class="inp1" placeholder="邮箱/手机号/用户名" /></li>
-                            <li><input type="text" id="pwd" class="inp1" placeholder="请输入登录密码" /></li>
+                            <li><input type="text" id="username" class="inp1" placeholder="邮箱/手机号/用户名" /></li>
+                            <li><input type="password" id="pwd" class="inp1" placeholder="请输入登录密码" /></li>
                             <li><input type="text" id="code" class="inp2" placeholder="请输入验证码" />
                                 <span class="code">
-                                    <img src="./img/checkcode.jpg" style="cursor:pointer; padding-top: 8px;" title="看不清楚，换一张">
-                                    <a href="#" style="cursor:pointer; height: 47px; display: inline-block; vertical-align: middle; color: #333333">换一张</a>
+                                    <div id="v_container" class="vcode" ></div>
+                                    <a class="acode" onclick="huan()">换一张</a>
                                 </span></li>
                             <li>
                                 <input type="button" id="login" style="cursor:pointer" class="btnlogin" value="登录" />
                             </li>
                             <li class="jizhu">
                                 <input type="checkbox"  class="checkbox" id="checkbox">30天内记住我的登录信息
-                                <a href="#" class="zhu" style="cursor:pointer; display: inline-block; line-height: 30px; color: #000000">忘记密码？</a>
+                                <a href="./register.html" class="zhu" style="cursor:pointer; display: inline-block; line-height: 30px; color: #333333">忘记密码？</a>
                                 <span style="float:right">/&nbsp;</span>
-                                <a href="./register.html"style="cursor:pointer; display: inline-block; line-height: 30px; color: #000000">注册 </a>
+                                <a href="./register.html"style="cursor:pointer; display: inline-block; line-height: 30px; color: #333333">注册 </a>
                             </li>
                         </ul>
                     </div>
@@ -71,3 +75,113 @@
     </div>
 </body>
 </html>
+<script>
+   /* $("#login").on("click",function(){
+       
+
+    });
+*/
+
+
+   
+    //验证码的判断
+    var verifycode = new GVerify("v_container");
+        document.getElementById("login").onclick = function(){
+                var username = $("#username").val();
+                var pwd = $("#pwd").val();
+                var code = $("#code").val();
+
+                var nameflag=false;
+                var pwdflag=false;
+                var namereg=/^[a-zA-Z]\w{5,15}$/;
+                var emailreg=/^([A-Za-z0-9])(\w)+@(\w)+(\.)(com|com\.cn|net|cn|net\.cn|org|biz|info|gov|gov\.cn|edu|edu\.cn)/;
+                var telreg=/^(((\()?\d{2,4}(\))?[-(\s)*]){0,2})?(\d{7,8})$/;
+                var phonereg=/^(13[0-9]{9})|(15[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(18[0-9]{9})|(19[0-9]{9})$/;
+                var pwdreg=/^[\w]{6,20}$/;
+
+                if(username == ""){
+                    alert("账号不能为空");
+                    $("#name").select();
+                    return false;
+                }
+
+                if(pwd == ""){
+                    alert("密码不能为空");
+                    $("#pwd").select();
+                    return false;
+                }
+
+                if(code == ""){
+                    alert("验证码不能为空");
+                    $("#code").select();
+                    return false;
+                }
+                
+
+                if(namereg.test(username)){
+                    nameflag = true;
+                }else if(emailreg.test(username)){
+                    nameflag = true;
+                }else if(telreg.test(username)){
+                    nameflag = true;
+                }else if(phonereg.test(username)){
+                    nameflag = true;
+                }else{
+                    nameflag = false;
+                    alert("账号格式不符合要求");
+                }
+
+                if(pwdreg.test(pwd)){
+                    pwdflag = true;
+                }else{
+                    pwdflag = false;
+                    alert("密码格式不对");
+                }
+
+
+            var res = verifycode.validate(document.getElementById("code").value);
+            if(res){
+
+                function promiseAjax(params){
+                    var promise = new Promise(function(resolve,reject){
+                        var xhr = new XMLHttpRequest();
+                        xhr.onreadystatechange = function(){
+                            if(xhr.readyState == 4 && xhr.status == 200){
+                                resolve(this.responseText);
+                            }
+                        }
+                        xhr.onerror = function(){
+                            reject('网络出错，请稍后重试');
+                        } 
+                        xhr.open(params.method,params.url,true);
+                        xhr.send(null);
+                    })
+                    return promise;
+                }
+
+                promiseAjax({
+                    "method":"get",
+                    "url":"./login.php?username="+username+"&pwd="+pwd
+                }).then(function(res){
+                    var result = JSON.parse(res);
+                    if(result.code == 200){    
+                        alert('登陆成功');
+                        location.href="./a.html";
+                    }else{
+                        alert("用户名或密码错误");
+                    }
+                }).catch(function(err){
+                    console.log(err);
+                })
+                alert("验证正确");
+            }else{
+                alert("验证码错误");
+            }
+        }  
+
+    //点击换一张执行
+    function huan(){
+        var verifycode = new GVerify("v_container");
+        var res = verifycode.validate(document.getElementById("code").value);
+    }
+</script>
