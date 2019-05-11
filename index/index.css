@@ -2,6 +2,9 @@
     width: 1212px;
     margin: 0 auto;
 }
+body{
+    background: #f4f4f4;
+}
 .top{
     height: 40px;
     width: 100%;
@@ -53,6 +56,7 @@
     width: 100%;
     overflow: hidden;
     border-bottom: 1px solid #2e8ae4;
+    background: #fff;
 }
 .log{
     height: 37px;
@@ -300,6 +304,9 @@
 
 .img-list li {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .img-list li.current {
     display: block;
@@ -336,8 +343,85 @@
 .content{
     height: 500px;
     width: 100%;
-    background: pink;
+    overflow: hidden;
 }
+.banner-1{
+    height: 365px;
+    width: 100%;
+    margin-top: 64px;
+}
+.title{
+    height: 45px;
+    width: 100%;
+}
+.title h1{
+    font-size: 24px;
+    float: left;
+}
+.title span{
+    float: right;
+    font-size: 14px;
+}
+.img{
+    height: 320px;
+    width: 100%;
+}
+.img ul li{
+    height: 320px;
+    width: 232px;
+    float: left;
+    margin-right: 12px;
+    background:#fff;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.img img{
+    height: 190px;
+    width: 212px;
+    margin: 15px 10px;
+}
+.png{
+    position: absolute;
+    top: -15px;
+    left: 147px;
+}
+.list_hover{
+    background: linear-gradient(to right,#18ebe2,#3084e5);
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    height: 68px;
+    width: 100%;
+    position: absolute;
+    bottom: -68px;
+    display: none;
+    transition: all 2s;
+}
+.hover_car a {
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 28px;
+    background: linear-gradient(to right,#ff29a7,#0060ff);
+    color: #fff;
+}
+.img ul li:hover{
+    box-shadow: 0px 0px 25px -2px rgba(0, 0, 0, .6);
+}
+@keyframes bjxg {
+    from{bottom: -68px;}
+    to{bottom: 0px;}
+}
+.img ul li:hover .list_hover{
+    display: block;
+    animation: bjxg 0.3s linear;
+    position: absolute;
+    bottom: 0;
+}
+
 
 
 
